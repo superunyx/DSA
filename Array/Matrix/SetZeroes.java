@@ -1,7 +1,7 @@
 import java.util.*;
 //
 //
-//Covert the row and column into zero where zero is present in a matrix of 0s and 1s.
+//Convert the row and column into zero where zero is present in a matrix of 0s and 1s.
 //
 //
 public class SetZeroes{
@@ -25,7 +25,7 @@ public class SetZeroes{
             }
             System.out.print("\n");
         }
-        int col0=matrix[0][0];
+        int col0=1;
         for (int i=row-1;i>=0;i--){
             for (int j=col-1;j>=0;j--){
                 if (matrix[i][j]==0){
