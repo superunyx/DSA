@@ -76,16 +76,17 @@ public class Pascal{
                     System.out.print("Enter the rows you want to generate: ");
                     int row3= sc.nextInt();
                     List<List<Integer>> ans3=generateTriangle(row3);
-                    System.out.print("[");
-                    for (int i=0;i<row3;i++){
-                        System.out.print("[");
-                        for (int j=0;j<ans3.get(i).size();j++){
-                            System.out.print(ans3.get(i).get(j)+",");
-                        }
-                        System.out.print("],");
-                    }
-                    System.out.print("]");
-                    System.out.println();
+                    //System.out.print("[");
+                    // for (int i=0;i<row3;i++){
+                    //     System.out.print("[");
+                    //     for (int j=0;j<ans3.get(i).size();j++){
+                    //         System.out.print(ans3.get(i).get(j)+",");
+                    //     }
+                    //     System.out.print("],");
+                    // }
+                    // System.out.print("]");
+                    // System.out.println();
+                    System.out.println(ans3);
                     break;
                 default:
                     System.out.println("Enter a valid choice.");
