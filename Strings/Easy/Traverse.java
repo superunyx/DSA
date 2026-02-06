@@ -1,4 +1,4 @@
-import java.util.*;
+mport java.util.*;
 
 public class Traverse{
     public static void main(String[] args) {
