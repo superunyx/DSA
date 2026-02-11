@@ -10,16 +10,16 @@
  */
 class Solution {
     public ListNode reverseLinks(ListNode head){
-        if(head.next.next==null){
-            ListNode temp = head.next;
-            head.next.next=head;
-            head.next=temp.next;
+        if(head==null || head.next==null){
+            return head;
         }
-        else{
-            return reverseLinks(head.next);
-        }
+        ListNode newHead = reverseLinks(head.next);
+        ListNode front = head.next;
+        front.next=head;
+        head.next=null;
+        return newHead;
     }
     public ListNode reverseList(ListNode head) {
-        
+        return reverseLinks(head);
     }
 }
