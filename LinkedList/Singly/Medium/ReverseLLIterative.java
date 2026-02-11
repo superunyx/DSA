@@ -9,17 +9,19 @@
  * }
  */
 class Solution {
-    public ListNode reverseLinks(ListNode head){
-        if(head.next.next==null){
-            ListNode temp = head.next;
-            head.next.next=head;
-            head.next=temp.next;
-        }
-        else{
-            return reverseLinks(head.next);
-        }
-    }
     public ListNode reverseList(ListNode head) {
-        
+        if(head==null || head.next==null){
+            return head;
+        }
+        ListNode mover = head.next;
+        ListNode follower = head;
+        while(mover!=null){
+            ListNode temp = mover.next;
+            mover.next=follower;
+            follower=mover;
+            mover=temp;
+        }
+        head.next=null;
+        return follower;
     }
 }
