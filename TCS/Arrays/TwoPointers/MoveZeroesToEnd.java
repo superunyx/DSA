@@ -8,7 +8,6 @@ public class MoveZeroesToEnd{
         for (int i =0;i<n;i++){
             arr[i]=sc.nextInt();
         }
-        int a=0,b=1;
         if(n==1){
             System.out.println(arr[0]+" ");
             return;
@@ -16,26 +15,18 @@ public class MoveZeroesToEnd{
         else if(n==0){
             return;
         }
-        int count=0;
-        while(a<n && b<n){
-            while(arr[a]!=0 && a<n){
-                a++;
-            }
-            while(arr[b]==0 && b<n){
-                b++;
-            }
-            if(arr[a]==0 && arr[b]!=0 && a<n && b<n){
+        int a=0;
+        for (int b=0;b<n;b++){
+            if(arr[b]!=0){
+                int temp=arr[a];
                 arr[a]=arr[b];
-                arr[b]=0;
+                arr[b]=temp;
                 a++;
-                b++;
-            }
-            while(arr[b]==0 && b<n){
-                b++;
             }
         }
+
         for (int i=0;i<n;i++){
-            System.out.println(arr[i]+" ");
+            System.out.print(arr[i]+" ");
         }
     }
 }
