@@ -38,3 +38,31 @@ public class Basic{
         print();
     }
 }
+
+//delete node;
+static void delete(int data){
+
+    if(head == null){
+        return;
+    }
+
+    if(head.data == data){
+        head = head.next;
+        return;
+    }
+
+    Node prev = head;
+    Node temp = head.next;
+
+    while(temp != null){
+
+        if(temp.data == data){
+            prev.next = temp.next;
+            return;
+        }
+
+        prev = temp;
+        temp = temp.next;
+    }
+}
+
