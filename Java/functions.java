@@ -40,3 +40,9 @@ st.isEmpty();
 
 // Array → print
 System.out.println(Arrays.toString(arr));
+
+
+//ArrayList reverse easy
+ArrayList<Integer> res = new ArrayList<>();
+Collections.reverse(res);
+return res;
