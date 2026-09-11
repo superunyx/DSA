@@ -19,3 +19,24 @@ int[][] ans = list.toArray(new int[0][]);
 
 //adding and array to a list of arrays
 res.add(new int[]{start,end});
+
+// print array direclty 
+//
+Arrays.toString(arr);
+
+
+
+// StringBuilder
+StringBuilder sb = new StringBuilder();
+sb.append(x);
+sb.toString();
+new StringBuilder(s).reverse().toString()
+// Stack
+Stack<Character> st = new Stack<>();
+st.push(x);
+st.pop();
+st.peek();
+st.isEmpty();
+
+// Array → print
+System.out.println(Arrays.toString(arr));
